@@ -3,23 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package noghteandkhat;
+package pointandline;
 
 /**
  *
  * @author Totia
  */
-public class Noghte {
+public class Point {
 
     private int xPosition;
     private int yPosition;
 
-    public Noghte() {
+    public Point() {
         this.xPosition = 0;
         this.yPosition = 0;
     }
 
-    public Noghte(int x, int y) {
+    public Point(int x, int y) {
         this.xPosition = x;
         this.yPosition = y;
     }
@@ -58,7 +58,7 @@ public class Noghte {
         return Math.sqrt((xDis * xDis) + (yDis * yDis));
     }
 
-    public double distance(Noghte other) {
+    public double distance(Point other) {
         int xDis = this.xPosition - other.xPosition;
         int yDis = this.yPosition - other.yPosition;
         return (int) Math.sqrt((xDis * xDis) + (yDis * yDis));
@@ -68,19 +68,19 @@ public class Noghte {
         return Math.sqrt(this.xPosition * this.xPosition + this.yPosition * this.yPosition);
     }
 
-    public double Shib(int x, int y) {
-        int yShib = this.yPosition - y;
-        int xShib = this.xPosition - x;
-        return (yShib / xShib);
+    public double Slope(int x, int y) {
+        int ySlope = this.yPosition - y;
+        int xSlope = this.xPosition - x;
+        return (ySlope / xSlope);
     }
 
-    public double Shib(Noghte other) {
-        int xShib = this.xPosition - other.xPosition;
-        int yShib = this.yPosition - other.yPosition;
-        return (yShib / xShib);
+    public double Slope(Point other) {
+        int xSlope = this.xPosition - other.xPosition;
+        int ySlope = this.yPosition - other.yPosition;
+        return (ySlope / xSlope);
     }
 
-    public double Shib() {
+    public double Slope() {
         return (this.yPosition - this.yPosition) / (this.xPosition * this.xPosition);
     }
 
