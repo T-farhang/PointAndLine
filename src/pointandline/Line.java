@@ -96,14 +96,22 @@ public class Line {
 
     @Override
     public String toString() {
-        return "Khat{" + "noghte1=" + point1 + ", noghte2=" + point2 + '}';
+        return "Line{" + "Point 1 = " + point1 + ", Point 2 = " + point2 + '}';
     }
 
     public void getLenght() {
         point1.distance(point2);
     }
 
-    public void getSlope() {
-        point1.Slope(point2);
+    public double setSlope() {
+        return point1.Slope(point2);
+    }
+
+    public void isParallel(Line other) {
+        if (this.setSlope() == other.setSlope()) {
+            System.out.println("They are parallel.");
+        } else {
+            System.out.println("They aren't parallel.");
+        }
     }
 }
