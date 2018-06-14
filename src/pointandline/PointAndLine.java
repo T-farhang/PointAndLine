@@ -41,8 +41,10 @@ public class PointAndLine {
         System.out.printf("Slope (1,1) and (2,2) : %.2f%n", n2.Slope(2, -5));
         Line l1 = new Line(0, 0, 1, 1);
         Line l2 = new Line(0, 0, 3, 3);
-        System.out.println(l1.setSlope());
-        System.out.println(l2.setSlope());
+        System.out.println(l1.lenght());
+        System.out.println(n1.Slope(3,3));
+        System.out.println(l1.slope());
+        System.out.println(l2.slope());
         l2.isParallel(l1);
     }
 

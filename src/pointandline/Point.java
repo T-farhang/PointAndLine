@@ -11,72 +11,72 @@ package pointandline;
  */
 public class Point {
 
-    private int xPosition;
-    private int yPosition;
+    private double xPosition;
+    private double yPosition;
 
     public Point() {
         this.xPosition = 0;
         this.yPosition = 0;
     }
 
-    public Point(int x, int y) {
+    public Point(double x, double y) {
         this.xPosition = x;
         this.yPosition = y;
     }
 
-    public int getxPosition() {
+    public double getxPosition() {
         return xPosition;
     }
 
-    public void setxPosition(int xPosition) {
+    public void setxPosition(double xPosition) {
         this.xPosition = xPosition;
     }
 
-    public int getyPosition() {
+    public double getyPosition() {
         return yPosition;
     }
 
-    public void setyPosition(int yPosition) {
+    public void setyPosition(double yPosition) {
         this.yPosition = yPosition;
     }
 
-    public int[] getXY() {
-        int[] result = new int[2];
+    public double[] getXY() {
+        double[] result = new double[2];
         result[0] = this.xPosition;
         result[1] = this.yPosition;
         return result;
     }
 
-    public void setXY(int x, int y) {
+    public void setXY(double x, double y) {
         this.xPosition = x;
         this.yPosition = y;
     }
 
-    public double distance(int x, int y) {
-        int xDis = this.xPosition - x;
-        int yDis = this.yPosition - y;
+    public double distance(double x, double y) {
+        double xDis = this.xPosition - x;
+        double yDis = this.yPosition - y;
         return Math.sqrt((xDis * xDis) + (yDis * yDis));
     }
 
     public double distance(Point other) {
-        int xDis = this.xPosition - other.xPosition;
-        int yDis = this.yPosition - other.yPosition;
-        return (int) Math.sqrt((xDis * xDis) + (yDis * yDis));
+        double xDis = this.xPosition - other.xPosition;
+        double yDis = this.yPosition - other.yPosition;
+        return Math.sqrt((xDis * xDis) + (yDis * yDis));
     }
 
     public double distance() {
         return Math.sqrt(this.xPosition * this.xPosition + this.yPosition * this.yPosition);
     }
 
-    public double Slope(int x, int y) {
-        int ySlope = this.yPosition - y;
-        int xSlope = this.xPosition - x;
+    public double Slope(double x, double y) {
+        double ySlope = this.yPosition - y;
+        double xSlope = this.xPosition - x;
         return (ySlope / xSlope);
     }
 
     public double Slope(Point other) {
-        int xSlope = this.xPosition - other.xPosition;
-        int ySlope = this.yPosition - other.yPosition;
+        double xSlope = this.xPosition - other.xPosition;
+        double ySlope = this.yPosition - other.yPosition;
         return (ySlope / xSlope);
     }
 
